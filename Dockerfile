@@ -6,7 +6,8 @@ COPY . /var/www/htdocs
 
 RUN touch /var/run/nginx.pid && \
   chown -R 101:101 /var/run/nginx.pid && \
-  chown -R 101:101 /var/cache/nginx
+  chown -R 101:101 /var/cache/nginx && \
+  chmod 0777 -R /var
 
 USER 101
 
