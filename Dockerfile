@@ -26,6 +26,7 @@ RUN yum -y install --setopt=tsflags=nodocs centos-release-scl-rh && \
     yum -y update --setopt=tsflags=nodocs && \
     yum -y install --setopt=tsflags=nodocs scl-utils rh-nginx18 && \
     yum clean all && \
+    chown -fR 997 /var/opt/rh/rh-nginx18
     mkdir -p /usr/share/nginx/html
 
 # Get prefix path and path to scripts rather than hard-code them in scripts
