@@ -5,9 +5,9 @@ COPY ./site.conf /etc/nginx/conf.d/default.conf
 COPY . /var/www/htdocs
 
 RUN touch /var/run/nginx.pid && \
-  chown -R www-data:www-data /var/run/nginx.pid && \
-  chown -R www-data:www-data /var/cache/nginx
+  chown -R 101:101 /var/run/nginx.pid && \
+  chown -R 101:101 /var/cache/nginx
 
-USER 33
+USER 101
 
 VOLUME /var/www
