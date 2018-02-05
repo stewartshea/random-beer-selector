@@ -51,6 +51,7 @@ COPY . /usr/share/nginx/html
 
 USER 997
 
-ENTRYPOINT ["container-entrypoint"]
-CMD [ "nginx18" ]
+# ENTRYPOINT ["container-entrypoint"]
+# CMD [ "nginx18" ]
+CMD whoami
 
