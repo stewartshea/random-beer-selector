@@ -5,8 +5,6 @@ COPY ./site.conf /etc/nginx/conf.d/default.conf
 COPY . /var/www/htdocs
 
 RUN touch /var/run/nginx.pid && \
-  chown -R 101:0 /var/run/nginx.pid && \
-  chown -R 101:0 /var/cache/nginx && \
   chmod 0777 -R /var
 
 USER 101
