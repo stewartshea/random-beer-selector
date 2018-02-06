@@ -6,7 +6,8 @@ RUN yum install -y epel-release \
     && yum clean all
 
 RUN mkdir /var/cache/nginx \
-    && chmod g+w /var/cache/nginx \
+    && chmod -R g+w /var/cache/nginx \
+    && chmod -R 0666 /var/log/nginx /var/lib/nginx \
     && sed -i -e '/listen/!b' -e '/80;/!b' -e 's/80;/8080;/' /etc/nginx/nginx.conf \
     && sed -i 's!80!8080!g' /etc/nginx/nginx.conf \
 	&& sed -i -e '/user/!b' -e '/nginx/!b' -e '/nginx/d' /etc/nginx/nginx.conf \
