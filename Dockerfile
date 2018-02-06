@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos-base:latest
 
 RUN yum install -y epel-release && yum clean all \
     && yum install -y nginx && yum clean all \
