@@ -96,6 +96,8 @@ RUN set -x \
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 	&& ln -sf /dev/stderr /var/log/nginx/error.log
 
+COPY . /usr/share/nginx/html
+
 EXPOSE 8080
 
 STOPSIGNAL SIGTERM
