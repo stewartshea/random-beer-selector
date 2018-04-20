@@ -1,15 +1,15 @@
 node {
-    #stage 'build'
-    #    openshiftBuild(bldCfg: 'random-beer-selector')
+    // stage 'build'
+    //    openshiftBuild(bldCfg: 'random-beer-selector')
     
     stage 'scan image'
         aqua hideBase: false, hostedImage: 'aqua-jenkins-sample-with-plugin/random-beer-selector', localImage: '', locationType: 'hosted', notCompliesCmd: '', onDisallowed: 'ignore', registry: 'internal registry', showNegligible: false
 
 
-    #stage 'ask for deployment'
-    #    input id: 'Approve01', message: 'Wanna deploy?????', ok: 'HANG TIGHT!'
+    //stage 'ask for deployment'
+    //    input id: 'Approve01', message: 'Wanna deploy?????', ok: 'HANG TIGHT!'
         
-    #stage 'deploy'
-    #    sh "oc rollout latest dc/random beer selector"
+    // stage 'deploy'
+    //    sh "oc rollout latest dc/random beer selector"
 
 }
