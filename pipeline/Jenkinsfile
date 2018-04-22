@@ -11,7 +11,7 @@ node {
             '''
         }
         // sh "docker docker login -e="${registry.email}" -u="${registry.username}" -p=wrapId('4adb7468-19de-48b2-ba8a-9b177ae6d8e9') ${server}"
-        aqua hideBase: false, hostedImage: 'random-beer-selector', localImage: '', locationType: 'hosted', notCompliesCmd: '', onDisallowed: 'ignore', registry: 'OpenShift', showNegligible: false
+        aqua hideBase: false, hostedImage: 'aqua-jenkins-sample-with-plugin/random-beer-selector', localImage: '', locationType: 'hosted', notCompliesCmd: '', onDisallowed: 'ignore', registry: 'OpenShift', showNegligible: false
 
 
     //stage 'ask for deployment'
