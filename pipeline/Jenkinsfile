@@ -8,6 +8,7 @@ node {
         withCredentials([usernamePassword(credentialsId: '4adb7468-19de-48b2-ba8a-9b177ae6d8e9', passwordVariable: 'password', usernameVariable: 'username')]) {
             sh '''
             docker login -e=shea.stewart@arctiq.ca -u=$username -p=$password
+            hostname
             '''
         }
         // sh "docker docker login -e="${registry.email}" -u="${registry.username}" -p=wrapId('4adb7468-19de-48b2-ba8a-9b177ae6d8e9') ${server}"
