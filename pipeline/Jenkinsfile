@@ -1,8 +1,8 @@
 
 
 node {
-     stage 'build'
-        openshiftBuild bldCfg: 'random-beer-selector'
+   //  stage 'build'
+    //    openshiftBuild bldCfg: 'random-beer-selector'
     
     stage 'scan image'
         withCredentials([usernamePassword(credentialsId: '4adb7468-19de-48b2-ba8a-9b177ae6d8e9', passwordVariable: 'password', usernameVariable: 'username')]) {
@@ -13,14 +13,14 @@ node {
         aqua hideBase: false, hostedImage: 'aqua-jenkins-sample-with-plugin/random-beer-selector', localImage: '', locationType: 'hosted', notCompliesCmd: '', onDisallowed: 'fail', registry: 'OpenShift', showNegligible: false
 
 
-    stage 'ask for deployment'
+ //   stage 'ask for deployment'
         input id: 'Approve01', message: 'Looks Good! Wanna deploy?????', ok: 'HANG TIGHT!'
         
-    stage 'deploy'
-        openshiftDeploy depCfg: 'random-beer-selector', verbose: 'true'
+  //  stage 'deploy'
+   //     openshiftDeploy depCfg: 'random-beer-selector', verbose: 'true'
 
 
-    stage 'verify'
-        openshiftVerifyDeployment depCfg: 'random-beer-selector', verbose: 'true', verifyReplicaCount: 'false'
+  //  stage 'verify'
+  //      openshiftVerifyDeployment depCfg: 'random-beer-selector', verbose: 'true', verifyReplicaCount: 'false'
 
 }
