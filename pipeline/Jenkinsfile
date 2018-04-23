@@ -14,7 +14,7 @@ node {
 
 
  //   stage 'ask for deployment'
-        input id: 'Approve01', message: 'Looks Good! Wanna deploy?????', ok: 'HANG TIGHT!'
+ //       input id: 'Approve01', message: 'Looks Good! Wanna deploy?????', ok: 'HANG TIGHT!'
         
   //  stage 'deploy'
    //     openshiftDeploy depCfg: 'random-beer-selector', verbose: 'true'
