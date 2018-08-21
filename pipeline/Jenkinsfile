@@ -1,8 +1,9 @@
 
 
 node {
-     stage 'build'
+  /*   stage 'build'
         openshiftBuild bldCfg: 'random-beer-selector'
+     */
     
     stage 'scan image'
         withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'password', usernameVariable: 'username')]) {
