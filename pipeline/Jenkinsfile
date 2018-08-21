@@ -6,11 +6,12 @@ node {
      */
     
     stage 'scan image'
+  /*
         withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'password', usernameVariable: 'username')]) {
             sh '''
             docker login -e=shea.stewart@arctiq.ca -u=$username -p=$password
             '''
-        }
+        }*/
         aqua hideBase: false, hostedImage: 'cicd/random-beer-selector', localImage: '', locationType: 'hosted', notCompliesCmd: '', onDisallowed: 'fail', registry: 'OpenShift', showNegligible: false
 
 
